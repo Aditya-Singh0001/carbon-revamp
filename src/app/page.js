@@ -1,66 +1,75 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client"
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Offerings from "./pages/Offerings";
+import RD from "./pages/RD";
+import Demo from "./pages/Demo";
+import ESGCalculator from "./pages/ESGCalculator";
 
-export default function Home() {
+/* 👇 ADD THIS */
+const ScrollManager = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+
+      const scrollToElement = () => {
+        const el = document.getElementById(id);
+        if (el) {
+          const yOffset = -90; // navbar height
+          const y =
+            el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+          return true;
+        }
+        return false;
+      };
+
+      // Try immediately
+      if (!scrollToElement()) {
+        // Retry (important when page just loaded)
+        const interval = setInterval(() => {
+          if (scrollToElement()) {
+            clearInterval(interval);
+          }
+        }, 100);
+
+        setTimeout(() => clearInterval(interval), 2000);
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }
+  }, [location]);
+
+  return null;
+};
+
+function App() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <Router>
+      <ScrollManager /> {/* 👈 ADD HERE */}
+      <div className="page-container">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/offerings" element={<Offerings />} />
+          <Route path="/rd" element={<RD />} />
+          <Route path="/demo" element={<Demo />} />
+          <Route path="/esg-calculator" element={<ESGCalculator />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
+export default App;

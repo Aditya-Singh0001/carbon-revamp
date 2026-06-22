@@ -1,0 +1,135 @@
+[
+  {
+    "Activity": "Stationary combustion",
+    "Category / Type": "Coal (bituminous)",
+    "Emission Factor": 2.42,
+    "Unit": "kg CO₂/kg",
+    "Scope": 1
+  },
+  {
+    "Activity": "Stationary combustion",
+    "Category / Type": "Lignite",
+    "Emission Factor": 1.1,
+    "Unit": "kg CO₂/kg",
+    "Scope": 1
+  },
+  {
+    "Activity": "Stationary combustion",
+    "Category / Type": "Diesel",
+    "Emission Factor": 2.68,
+    "Unit": "kg CO₂/litre",
+    "Scope": 1
+  },
+  {
+    "Activity": "Stationary combustion",
+    "Category / Type": "Petrol (gasoline)",
+    "Emission Factor": 2.31,
+    "Unit": "kg CO₂/litre",
+    "Scope": 1
+  },
+  {
+    "Activity": "Stationary combustion",
+    "Category / Type": "Natural gas",
+    "Emission Factor": 2.75,
+    "Unit": "kg CO₂/Nm³",
+    "Scope": 1
+  },
+  {
+    "Activity": "Stationary combustion",
+    "Category / Type": "LPG",
+    "Emission Factor": 1.51,
+    "Unit": "kg CO₂/litre",
+    "Scope": 1
+  },
+  {
+    "Activity": "Stationary combustion",
+    "Category / Type": "Furnace oil",
+    "Emission Factor": 3.1,
+    "Unit": "kg CO₂/kg",
+    "Scope": 1
+  },
+  {
+    "Activity": "Mobile combustion",
+    "Category / Type": "Passenger vehicles (petrol)",
+    "Emission Factor": 2.31,
+    "Unit": "kg CO₂/litre",
+    "Scope": 1
+  },
+  {
+    "Activity": "Mobile combustion",
+    "Category / Type": "Passenger vehicles (diesel)",
+    "Emission Factor": 2.68,
+    "Unit": "kg CO₂/litre",
+    "Scope": 1
+  },
+  {
+    "Activity": "Mobile combustion",
+    "Category / Type": "Heavy trucks (diesel)",
+    "Emission Factor": 2.68,
+    "Unit": "kg CO₂/litre",
+    "Scope": 1
+  },
+  {
+    "Activity": "Fugitive emissions",
+    "Category / Type": "Natural gas leakage",
+    "Emission Factor": 0.055,
+    "Unit": "kg CO₂e/MJ",
+    "Scope": 1
+  },
+  {
+    "Activity": "Industrial processes",
+    "Category / Type": "Cement (process emissions)",
+    "Emission Factor": 0.52,
+    "Unit": "kg CO₂/kg cement",
+    "Scope": 1
+  },
+  {
+    "Activity": "Grid electricity (India avg)",
+    "Category / Type": "Direct combustion intensity",
+    "Emission Factor": 0.72,
+    "Unit": "kg CO₂/kWh",
+    "Scope": 2
+  },
+  {
+    "Activity": "Grid electricity (lifecycle upstream)",
+    "Category / Type": "Well-to-tank",
+    "Emission Factor": 0.08,
+    "Unit": "kg CO₂e/kWh",
+    "Scope": 2
+  },
+  {
+    "Activity": "T&D losses adjustment",
+    "Category / Type": "Grid losses",
+    "Emission Factor": 0.1,
+    "Unit": "kg CO₂e/kWh",
+    "Scope": 2
+  },
+  {
+    "Activity": "Transportation",
+    "Category / Type": "Road freight (diesel truck)",
+    "Emission Factor": 0.15,
+    "Unit": "kg CO₂/tonne-km",
+    "Scope": 3
+  },
+  {
+    "Activity": "Transportation",
+    "Category / Type": "Rail freight",
+    "Emission Factor": 0.03,
+    "Unit": "kg CO₂/tonne-km",
+    "Scope": 3
+  },
+  {
+    "Activity": "Transportation",
+    "Category / Type": "Air freight",
+    "Emission Factor": 0.7,
+    "Unit": "kg CO₂/tonne-km",
+    "Scope": 3
+  },
+  {
+    "Activity": "Transportation",
+    "Category / Type": "Sea freight",
+    "Emission Factor": 0.01,
+    "Unit": "kg CO₂/tonne-km",
+    "Scope": 3
+  }
+]
