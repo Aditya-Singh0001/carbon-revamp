@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight,ArrowDown, Database, BarChart2, TrendingUp, FileSearch, Eye, Settings, Scale, ShieldCheck, CircleDollarSign, Clock, Target, LogIn } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -65,7 +65,7 @@ const Home = () => {
               }}
             >
               <Link
-                to="/demo"
+                href="/demo"
                 className="btn btn-primary"
                 style={{ padding: "1rem 3rem", fontSize: "1.25rem" }}
               >
@@ -335,7 +335,7 @@ const Home = () => {
 
           <div style={{ textAlign: "center", marginTop: "4rem" }}>
             <Link
-              to="/offerings"
+              href="/offerings"
               className="btn btn-primary"
               style={{ padding: "1rem 3rem", fontSize: "1.15rem" }}
             >
