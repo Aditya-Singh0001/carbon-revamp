@@ -34,7 +34,7 @@ const Offerings = () => {
   return (
     <main
       className="animate-fade-in"
-      style={{ background: "var(--bg-secondary)", paddingBottom: "6rem" }}
+      style={{ background: "var(--bg-secondary)", paddingBottom: "6rem", paddingTop: "80px" }}
     >
       <div className="container" style={{ paddingTop: "4rem" }}>
         <h1
@@ -55,9 +55,9 @@ const Offerings = () => {
                 <h2 className="offering-title">{offering.title}</h2>
                 <p className="offering-desc" style={{ marginBottom: offering.cta ? '1.5rem' : '0' }}>{offering.description}</p>
                 {offering.cta && (
-                  <Link href={offering.cta.link} className="btn btn-primary" style={{ padding: '0.75rem 1.5rem', display: 'inline-block' }}>
+                  <a href={offering.cta.link} className="btn btn-primary" style={{ padding: '0.75rem 1.5rem', display: 'inline-block' }}>
                     {offering.cta.text}
-                  </Link>
+                  </a>
                 )}
               </div>
             </div>

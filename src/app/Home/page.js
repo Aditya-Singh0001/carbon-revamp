@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <main
       className="animate-fade-in"
-      style={{ background: "white", paddingBottom: "0" }}
+      style={{ background: "white", paddingBottom: "0", paddingTop: "80px" }}
     >
       {/* 1. Main Hero Section */}
       <section

@@ -123,7 +123,7 @@ const ESGCalculator = () => {
   );
 
   return (
-    <main className="animate-fade-in" style={{ background: 'var(--bg-secondary)', minHeight: 'calc(100vh - 80px)', paddingBottom: '6rem' }}>
+    <main className="animate-fade-in" style={{ background: 'var(--bg-secondary)', minHeight: 'calc(100vh - 80px)', paddingBottom: '6rem', paddingTop: '80px' }}>
       <div className="container" style={{ paddingTop: '4rem', maxWidth: '1400px' }}>
 
         <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem' }}>
@@ -139,8 +139,8 @@ const ESGCalculator = () => {
         </div>
 
         {/* Subscribe Banner */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '3rem' }}>
-          <Link href="/demo" className="btn" style={{ padding: '0.875rem 2.5rem', fontSize: '1.05rem', display: 'flex', gap: '8px', alignItems: 'center', background: 'var(--text-main)', color: 'white', borderRadius: '999px', boxShadow: 'var(--shadow-md)' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '4rem' }}>
+          <Link href="/demo" className="btn" style={{ padding: '1rem 5rem', fontSize: '1.1rem', display: 'inline-flex', gap: '10px', alignItems: 'center', background: 'var(--text-main)', color: 'white', borderRadius: '999px', boxShadow: 'var(--shadow-md)', whiteSpace: 'nowrap', minWidth: '450px', justifyContent: 'center' }}>
             <Lock size={18} /> Subscribe to access the full set of ESG factors
           </Link>
         </div>

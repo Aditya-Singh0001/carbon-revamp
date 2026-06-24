@@ -148,7 +148,7 @@ const Demo = () => {
           minHeight: "calc(100vh - 80px)",
           display: "flex",
           alignItems: "flex-start",
-          paddingTop: "2rem",
+          paddingTop: "calc(80px + 2rem)",
           paddingBottom: "2rem",
         }}
       >
