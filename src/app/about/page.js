@@ -67,7 +67,7 @@ const About = () => {
   return (
     <main
       className="animate-fade-in"
-      style={{ background: "white", paddingBottom: "4rem" }}
+      style={{ background: "white", paddingBottom: "4rem", paddingTop: "80px" }}
     >
       <div className="container">
         {/* Company Section */}
@@ -125,7 +125,7 @@ const About = () => {
               Book a Demo
             </Link>
           </div>
-          <div className="about-logo-container hide-on-mobile">
+          <div className="about-logo-container hide-about-logo-on-mobile">
             <img src="/CarbonTatvaAi_logo.png" alt="CarbonTatva AI" />
           </div>
         </section>

@@ -112,7 +112,7 @@ const RD = () => {
       )}
       <main
         className="animate-fade-in"
-        style={{ background: "var(--bg-secondary)", paddingBottom: "6rem" }}
+        style={{ background: "var(--bg-secondary)", paddingBottom: "6rem", paddingTop: "80px" }}
       >
         <div className="container" style={{ paddingTop: "4rem" }}>
           {/* Intro Section */}
